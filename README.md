@@ -1,94 +1,118 @@
-# 💸 Loan Approval Predictor
+# 🏦 Loan Approval Predictor
 
-A machine learning-based tool to predict loan approval status using user details. It includes:
+This project is a complete machine learning pipeline that predicts loan approval status based on applicant information. It includes:
 
-- 🧪 Exploratory Data Analysis (EDA)
-- 🧹 Data Cleaning using a reusable Python module
-- 🤖 Multiple ML models with performance comparison
-- 📊 SHAP-based Explainability Dashboard
-- 🧑‍💼 Streamlit App for live user predictions
+- ✅ Exploratory Data Analysis (EDA)
+- 🧹 Data Preprocessing Module
+- 📊 Multiple Model Training & Comparison
+- 🏆 Logistic Regression selected as the best model
+- 💡 Streamlit App for user input-based prediction
+- 📈 Interactive Explainer Dashboard to understand model decisions
 
 ---
 
-## 🚀 Project Structure
+## 📂 Project Structure
 
 ```
 loan_approval_predictor/
 │
 ├── app/
-│   └── streamlit_app.py          # Streamlit app for user prediction
-│
-├── data/
-│   └── loan.csv                  # Raw dataset
-│
+│   └── streamlit_app.py         # Streamlit web app
 ├── notebooks/
 │   ├── exploratory_analysis.ipynb
-│   └── model_training.ipynb
-│
+│   └── model_training.ipynb     # Model comparison
 ├── src/
-│   └── data_preprocessing.py     # Reusable data cleaning functions
-│
-├── model.joblib                  # Saved best-performing model
-├── test_data.joblib              # X_test, y_test for ExplainerDashboard
-├── explainer_dashboard.py        # ExplainerDashboard code
+│   └── data_preprocessing.py    # Reusable cleaning module
+├── model/
+│   ├── model.joblib             # Trained logistic regression model
+│   └── test_data.joblib         # X_test, y_test
 ├── requirements.txt
 └── README.md
 ```
 
 ---
 
-## 📈 ML Model Comparison
+## 🚀 Live Dashboard
 
-We trained and evaluated multiple models:
-- Logistic Regression ✅ (Best)
-- Decision Tree
-- Random Forest
-- XGBoost
+🔍 Explore the model explanations interactively using SHAP, What-If analysis, and more:
 
-Final model chosen: **Logistic Regression** based on highest test accuracy.
+👉 [**Loan Approval Explainer Dashboard**](https://loan-approval-predictor-explainer.onrender.com)
 
 ---
 
-## 📊 Explainability
+## 🖥️ Run the Streamlit App Locally
 
-We used `ExplainerDashboard` with SHAP to interpret model predictions.
+### 📌 Prerequisites
 
-### 🔗 Live Dashboard:  
-👉 [Click here to view](https://your-deployed-dashboard-link.com) 
+- Python 3.8+
+- `pip install -r requirements.txt`
 
----
-
-## 🧠 Top Influential Features (from SHAP)
-
-1. Credit_History  
-2. Married  
-3. Education  
-4. Gender  
-5. LoanAmount  
-
----
-
-## 🖥️ Streamlit App (for Demo)
-
-Use this locally to test loan approval by entering key user details.
+### ▶️ Run App
 
 ```bash
-# Install dependencies
-pip install -r requirements.txt
+cd app
+streamlit run streamlit_app.py
+```
 
-# Run the app
-streamlit run app/streamlit_app.py
+It will launch a web UI to input user details and check loan approval prediction.
+
+---
+
+## 📂 Dataset
+
+The dataset used in this project contains information related to loan applicants such as gender, income, credit history, loan amount, and property details.
+
+- **Source**: [Loan Prediction Dataset on Kaggle](https://www.kaggle.com/datasets/altruistdelhite04/loan-prediction-problem-dataset)
+- **Total Records**: 614 entries
+- **Features**:
+  - Gender, Marital Status, Dependents
+  - Education, Self_Employed, ApplicantIncome
+  - LoanAmount, Loan_Amount_Term, Credit_History
+  - Property_Area, Loan_Status (Target)
+
+The dataset was cleaned and preprocessed using the custom `load_and_clean_data()` function in the `src/data_preprocessing.py` module.
+
+
+---
+
+## 📊 Model Comparison Summary
+
+We trained and evaluated multiple models:
+- Logistic Regression ✅ *(Best Accuracy)*
+- Decision Tree
+- Random Forest
+- KNN
+- XGBoost
+
+Comparison is visualized in `notebooks/model_training.ipynb`.
+
+---
+
+## 📦 Install Dependencies
+
+```bash
+pip install -r requirements.txt
 ```
 
 ---
 
-## 🌐 Deployment Info
+## 📌 Tech Stack
 
-- ExplainerDashboard deployed on: **Render** 
-- Streamlit app is local-only for now; clone this repo to run
+- Python, Pandas, scikit-learn, XGBoost
+- Matplotlib, Seaborn (for EDA)
+- Streamlit (user interface)
+- ExplainerDashboard (model interpretability)
+- Render (deployment)
 
 ---
 
-## ✍️ How to Contribute
+## 🤝 Contribution & Credits
 
-Clone the repo and follow the structure. You can modify or add new models and retrain.
+This project was part of an internship to demonstrate the end-to-end lifecycle of a ML application. Contributions and forks are welcome!
+
+---
+
+## 🧠 Author
+
+👤 Somesh Chaurasia  
+🎓 B.Tech CSE
