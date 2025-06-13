@@ -2,7 +2,7 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder
 
-def load_and_clean_data(path='data/loan.csv'):
+def load_and_clean_data(path='../data/loan.csv'):
     df = pd.read_csv(path)
 
     # Drop Loan_ID (not useful for prediction)
