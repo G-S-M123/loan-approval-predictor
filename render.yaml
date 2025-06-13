@@ -1,0 +1,8 @@
+services:
+  - type: web
+    name: loan-approval-dashboard
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python src/explainer_dashboard.py
+    region: oregon
+    plan: free
