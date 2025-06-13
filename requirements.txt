@@ -4,3 +4,4 @@ joblib
 explainerdashboard
 dash
 gunicorn
+streamlit
