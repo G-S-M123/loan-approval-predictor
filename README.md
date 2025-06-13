@@ -108,7 +108,7 @@ pip install -r requirements.txt
 
 ## 🤝 Contribution & Credits
 
-This project was part of an internship to demonstrate the end-to-end lifecycle of a ML application. Contributions and forks are welcome!
+This project was to demonstrate the end-to-end lifecycle of a ML application. Contributions and forks are welcome!
 
 ---
 
