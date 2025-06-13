@@ -84,7 +84,7 @@ streamlit run app/streamlit_app.py
 
 ## 🌐 Deployment Info
 
-- ExplainerDashboard deployed on: **Heroku/Render** *(add once deployed)*
+- ExplainerDashboard deployed on: **Render** 
 - Streamlit app is local-only for now; clone this repo to run
 
 ---

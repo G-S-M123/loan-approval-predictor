@@ -1,8 +1,10 @@
 services:
   - type: web
-    name: loan-approval-dashboard
+    name: explainer-dashboard
     env: python
-    buildCommand: pip install -r requirements.txt
-    startCommand: python src/explainer_dashboard.py
-    region: oregon
     plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python explainer_dashboard.py
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10
